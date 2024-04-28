@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Farmer_V2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="FARM_TYPES">
+    <Key>
+      <PropertyRef Name="TYPE OF FARMING" />
+    </Key>
+    <Property Name="TYPE OF FARMING" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FARMERS">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Village_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TYPE OF FARMING" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="PROVINCE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GENDER" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GENDERS">
+    <Key>
+      <PropertyRef Name="GENDER" />
+    </Key>
+    <Property Name="GENDER" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROVINCES">
+    <Key>
+      <PropertyRef Name="PROVINCE" />
+    </Key>
+    <Property Name="PROVINCE" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__FARMERS__GENDER__4F7CD00D">
+    <End Role="GENDERS" Type="Self.GENDERS" Multiplicity="1" />
+    <End Role="FARMERS" Type="Self.FARMERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GENDERS">
+        <PropertyRef Name="GENDER" />
+      </Principal>
+      <Dependent Role="FARMERS">
+        <PropertyRef Name="GENDER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FARMERS__PROVINC__5070F446">
+    <End Role="PROVINCES" Type="Self.PROVINCES" Multiplicity="1" />
+    <End Role="FARMERS" Type="Self.FARMERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVINCES">
+        <PropertyRef Name="PROVINCE" />
+      </Principal>
+      <Dependent Role="FARMERS">
+        <PropertyRef Name="PROVINCE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FARMERS__TYPE OF__5165187F">
+    <End Role="FARM_TYPES" Type="Self.FARM_TYPES" Multiplicity="1" />
+    <End Role="FARMERS" Type="Self.FARMERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FARM_TYPES">
+        <PropertyRef Name="TYPE OF FARMING" />
+      </Principal>
+      <Dependent Role="FARMERS">
+        <PropertyRef Name="TYPE OF FARMING" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Farmer_V2ModelStoreContainer">
+    <EntitySet Name="FARM_TYPES" EntityType="Self.FARM_TYPES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FARMERS" EntityType="Self.FARMERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GENDERS" EntityType="Self.GENDERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROVINCES" EntityType="Self.PROVINCES" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__FARMERS__GENDER__4F7CD00D" Association="Self.FK__FARMERS__GENDER__4F7CD00D">
+      <End Role="GENDERS" EntitySet="GENDERS" />
+      <End Role="FARMERS" EntitySet="FARMERS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FARMERS__PROVINC__5070F446" Association="Self.FK__FARMERS__PROVINC__5070F446">
+      <End Role="PROVINCES" EntitySet="PROVINCES" />
+      <End Role="FARMERS" EntitySet="FARMERS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FARMERS__TYPE OF__5165187F" Association="Self.FK__FARMERS__TYPE OF__5165187F">
+      <End Role="FARM_TYPES" EntitySet="FARM_TYPES" />
+      <End Role="FARMERS" EntitySet="FARMERS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon link-->
+    <link href="~/WebImages/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <title>@ViewBag.Title - Farm Central</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+
+    <!---Font awesome icon link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .body-content {
+            flex: 1;
+        }
+
+        footer {
+            background-color: darkslategrey;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .social-icons {
+            font-size: 24px;
+            color: azure;
+        }
+
+        .fa-youtube {
+            color: white;
+        }
+
+        .fa-youtube:hover {
+            color: red;
+        }
+
+        .fa-github {
+            color: white;
+        }
+
+        .fa-github:hover {
+            color: black;
+        }
+
+        .fa-instagram {
+            color: white;
+        }
+
+        .fa-instagram:hover {
+            background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+        }
+
+        .fa-stack-overflow {
+            color: white
+        }
+
+        .fa-stack-overflow:hover {
+            color: #F48024;
+        }
+
+        .dropdown-menu {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .nav-link2 {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav-link:hover {
+            background-color: #86aba7;
+            border-radius: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:darkslategrey">
+        <div class="container">
+            @Html.ActionLink("DashBoard", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <!-- Check if the session variable "Email" is not null -->
+                <ul class="navbar-nav ms-auto " style="font-family:'Yu Gothic'">
+                    @if (Session["Email"] != null)
+                    {
+
+                        <!-- Dropdown menu for "Features" -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff;">
+                                Features
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <!-- Dropdown item: Admin -->
+                                <li><i class="fa-sharp fa-solid fa-plus"></i>@Html.ActionLink(" Admin", "Index", "Admin", new { area = "" }, new { @class = "nav-link2" })</li>
+                                <!-- Dropdown item: View Stats -->
+                                <li><i class="fas fa-chart-line"></i>@Html.ActionLink(" View Stats", "Index", "GraphAnalytics", new { area = "" }, new { @class = "nav-link2" })</li>
+                            </ul>
+                        </li>
+                        <!---end dropdown links-->
+
+                        <!-- Navigation item: Contact -->
+                        <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link", style = "color:#fff;" })</li>
+                        <!-- Navigation item: Displaying the user's email -->
+                        <li>@Html.ActionLink("Hello " + Session["Email"], null, new { area = "" }, new { @class = "nav-link", style = "color:#fff;" })</li>
+                        <!-- Navigation item: Logout -->
+                        <li>@Html.ActionLink("Logout", "Logout", "Admin", new { area = "" }, new { @class = "nav-link", style = "color:#fff;" })</li>
+
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+
+    <footer>
+        <br />
+        <br />
+
+        <!-- My social media -->
+        <div class="social-icons">
+            <a href="https://www.youtube.com/channel/UCzUasHPt5nt8pIy36Y-rOaw" class="fab fa-youtube"></a>
+            <a href="https://github.com/mthobisionthehubZA" class="fab fa-github"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-stack-overflow"></a>
+        </div>
+        <!--end-->
+        <br />
+        <p>&copy; @DateTime.Now.Year - Farm Central Application</p>
+    </footer>
+
+
+
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <!--JQuery toggle() function to toggle the visibility of the dropdown menu-->
+    <script>
+        $('.dropdown-toggle').on('click', function () {
+            $(this).next('.dropdown-menu').toggle();
+        });
+    </script>
+</body>
+</html>
+
+

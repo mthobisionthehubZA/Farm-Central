@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Farmers_App.Models.admin>
+
+@{
+    ViewBag.Title = "Admins Page";
+
+}
+<style>
+    /*.btn btn-create {
+        background-color: orange;
+        color: orange;
+    }*/
+
+    .btn-edit {
+        background-color: darkslategrey;
+        color: #fff;
+    }
+
+    .btn-delete:hover {
+        background-color: grey;
+        color: #fff;
+    }
+
+    /*h2 {
+        text-align: center;
+        color: darkslategray;
+        text-decoration: underline;
+        padding: 7px;
+        font-family: Arial, sans-serif;
+    }*/
+</style>
+
+
+@* This block of code checks if there is a message stored in TempData named "AlertMessage". If there is, it displays it as a success alert. *@
+
+    @if (TempData["AlertMessage"] != null)
+    {
+        <div class="alert alert-success" id="alertMessage">
+            <strong> @TempData["AlertMessage"]</strong><!-- Display the message stored in TempData -->
+        </div>
+
+    }
+@*end-------------*@
+
+    @*<h2 style="color:darkslategray">System Admins</h2>*@
+    <br />
+    <p>
+        @Html.ActionLink("Create New", "Signup", new { id = "" }, new { @class = "btn btn-warning" })
+    </p>
+    <br />
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th>
+                @Html.DisplayName("ID")
+            </th>
+            <th>
+                @Html.DisplayName("User emails")
+            </th>
+            <th>
+                @Html.DisplayName("Encypted Passwords")
+            </th>
+            <th>
+                @Html.DisplayName("Action")
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.userId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.password)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.userId }, new { @class = "btn btn-edit" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.userId }, new { @class = "btn btn-delete" })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <br />
+    <br />
+    <!----------custom script to close alert message after 5 sec-------->
+    <script src="~/Custom Js/AlertMessageTimer.js"></script>

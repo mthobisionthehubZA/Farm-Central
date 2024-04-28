@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Dash Board";
+}
+
+<style>
+
+    .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+    }
+    .card p {
+        text-align:center;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .button {
+        border: none;
+        outline: 0;
+        display: inline-grid;
+        padding: 8px;
+        color: white;
+        background-color: darkslategrey;
+        text-align: center;
+        cursor: pointer;
+        width: 90%;
+        text-decoration: none;
+        border-radius:10px;
+        height:50px;
+    }
+    .button:hover {
+        background-color: #86aba7;
+        color: white;
+
+    }
+    hr{
+       display:none;
+    }
+   
+   
+</style>
+
+<main>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="~/WebImages/istockphoto-1352935501-612x612.jpg" />
+                <p>Navigate to Create Account View. This shall allow the logged-in employee to add a new farmer to the database.Who can then add product to the database.</p>
+                <br />
+                <p><a class="button"  href="@Url.Action("Create","Farmer")">Capture Farmer</a></p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="~/WebImages/Search Two.jpg" />
+                <p>Navigate to Farmer product's View. This shall allow a logged-in employee to view the list of all the products ever supplied by a specific farmer.</p>
+                <br />
+                <p><a class="button" href="@Url.Action("Index", "Farmer")">View Farmer</a></p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="~/WebImages/Privacy4.jpg" />
+                <p>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show user.</p>
+                <br />
+                <p>
+                    <a class="button"  href="@Url.Action("Privacy", "Home")">Privacy </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</main>

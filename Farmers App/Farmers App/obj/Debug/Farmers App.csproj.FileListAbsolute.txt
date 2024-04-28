@@ -1,0 +1,90 @@
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\Farmers App.dll.config
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\Farmers App.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\Farmers App.pdb
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\csc.exe
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\csc.exe.config
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\csc.rsp
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\csi.exe
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\csi.exe.config
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\csi.rsp
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.AppContext.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Console.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.IO.Compression.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Net.Http.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Net.Sockets.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.ValueTuple.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Xml.XPath.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\vbc.exe
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\vbc.exe.config
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\vbc.rsp
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\VBCSCompiler.exe
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\Antlr3.Runtime.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\BCrypt.Net.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\DevOne.Security.Cryptography.BCrypt.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\EntityFramework.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\EntityFramework.SqlServer.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\Newtonsoft.Json.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\PagedList.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\PagedList.Mvc.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.Helpers.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.Mvc.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.Optimization.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.Razor.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.WebPages.Deployment.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.WebPages.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.WebPages.Razor.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\WebGrease.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\BCrypt.Net.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\EntityFramework.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\EntityFramework.SqlServer.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\PagedList.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\PagedList.Mvc.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.Helpers.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.Mvc.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.Optimization.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.Razor.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.WebPages.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.WebPages.Deployment.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\System.Web.WebPages.Razor.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\Newtonsoft.Json.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\Antlr3.Runtime.pdb
+C:\Users\mmase\source\repos\Farmers App\Farmers App\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\mmase\source\repos\Farmers App\Farmers App\obj\Debug\Farmers App.csproj.AssemblyReference.cache
+C:\Users\mmase\source\repos\Farmers App\Farmers App\obj\Debug\Farmers App.csproj.CoreCompileInputs.cache
+C:\Users\mmase\source\repos\Farmers App\Farmers App\obj\Debug\Farmers .8A7E7AF5.Up2Date
+C:\Users\mmase\source\repos\Farmers App\Farmers App\obj\Debug\Farmers App.dll
+C:\Users\mmase\source\repos\Farmers App\Farmers App\obj\Debug\Farmers App.pdb

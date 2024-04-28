@@ -1,0 +1,117 @@
+﻿@model Farmers_App.Models.FARMER
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <style>
+        body {
+            background-color: white;
+        }
+
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .control-label {
+            color: darkslategrey; /* Dark Green */
+            font-weight: bold;
+        }
+
+        .form-control {
+            border-color: darkslategrey; /* Dark Green */
+        }
+
+        .btn-success {
+            background-color: darkslategrey; /* Dark Green */
+            border-color: darkslategrey; /* Dark Green */
+        }
+
+        .btn-primary {
+            background-color: #808080; /* Grey */
+            border-color: #808080; /* Grey */
+        }
+    </style>
+
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 offset-md-3">
+                <div class="table-responsive-xxl border p-4">
+                    <h4 class="text-center" style="color: #006400;">Edit Farmer</h4>
+                    <hr />
+                    @Html.HiddenFor(model => model.UserID)
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <br />
+                            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", runat = "server", type = "PlainText", autocomplete = "off" } })
+                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", runat = "server", type = "PlainText", autocomplete = "off" } })
+                            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.Village_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Village_Name, new { htmlAttributes = new { @class = "form-control", runat = "server", type = "PlainText", autocomplete = "off" } })
+                            @Html.ValidationMessageFor(model => model.Village_Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.TYPE_OF_FARMING, "TYPE OF FARMING", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("TYPE_OF_FARMING", null, "--Select Type of Farming--", htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TYPE_OF_FARMING, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.PROVINCE, "PROVINCE", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("PROVINCE", null, "--Select Province--", htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PROVINCE, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.GENDER, "GENDER", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("GENDER", null, "--Select Gender--", htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.GENDER, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10 text-center">
+                            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
+                            <span style="padding: 0 5px;">|</span>
+                            <input type="submit" value="Save" class="btn btn-success" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }
+

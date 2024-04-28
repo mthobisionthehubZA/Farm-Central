@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Farmer_V2ModelStoreContainer" CdmEntityContainer="Farmer_V2Entities1">
+    <EntitySetMapping Name="FARM_TYPES">
+      <EntityTypeMapping TypeName="Farmer_V2Model.FARM_TYPES">
+        <MappingFragment StoreEntitySet="FARM_TYPES">
+          <ScalarProperty Name="TYPE_OF_FARMING" ColumnName="TYPE OF FARMING" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FARMERS">
+      <EntityTypeMapping TypeName="Farmer_V2Model.FARMER">
+        <MappingFragment StoreEntitySet="FARMERS">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Village_Name" ColumnName="Village_Name" />
+          <ScalarProperty Name="TYPE_OF_FARMING" ColumnName="TYPE OF FARMING" />
+          <ScalarProperty Name="PROVINCE" ColumnName="PROVINCE" />
+          <ScalarProperty Name="GENDER" ColumnName="GENDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GENDERS">
+      <EntityTypeMapping TypeName="Farmer_V2Model.GENDER">
+        <MappingFragment StoreEntitySet="GENDERS">
+          <ScalarProperty Name="GENDER1" ColumnName="GENDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVINCES">
+      <EntityTypeMapping TypeName="Farmer_V2Model.PROVINCE">
+        <MappingFragment StoreEntitySet="PROVINCES">
+          <ScalarProperty Name="PROVINCE1" ColumnName="PROVINCE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

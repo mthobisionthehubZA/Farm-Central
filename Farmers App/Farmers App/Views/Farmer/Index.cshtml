@@ -1,0 +1,183 @@
+﻿@model PagedList.IPagedList<Farmers_App.Models.FARMER>
+
+@*To support the paged list view*@
+
+@using PagedList.Mvc;
+@using PagedList;
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+
+    .custom-table {
+        border: 1px solid grey;
+    }
+
+        .custom-table th {
+            background-color: grey;
+            color: white;
+        }
+
+    .btn-edit {
+        background-color: darkslategrey;
+        color: #fff;
+    }
+
+    .btn-delete {
+        background-color: grey;
+        color: #fff;
+    }
+
+    .btn-search {
+        background-color: darkslategrey;
+        color: #fff;
+    }
+
+    /* Pagination CSS Code: */
+    .pagination-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .pagination {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .pagination li {
+            margin-right: 5px;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: darkgrey;
+            color: #fff;
+        }
+
+            .pagination a:hover {
+                background-color: darkslategrey;
+                color: #fff;
+                border-color: darkslategrey;
+            }
+
+    pagination .disabled a {
+        pointer-events: none;
+        background-color: #ddd;
+        color: #aaa;
+        border-color: #ddd;
+    }
+</style>
+
+@*Display message when edited,created, deleted*@
+
+@if (TempData["AlertMessage"] != null)
+{
+    <div class="alert alert-success" id="alertMessage">
+        <strong> @TempData["AlertMessage"]</strong>
+    </div>
+
+}
+@*end display code*@
+
+<br />
+@using (Html.BeginForm("Index", "Farmer", FormMethod.Get))
+{
+    <div class="search">
+        <span class="input-group-addon"><i class="fa fa-search" style="font-size: 22px;"></i></span>
+        <input type="text" name="searchString" />
+        <input type="submit" value="Search" class="btn btn-search" />
+    </div>
+    <br />
+    <div class="btn-create">
+        @Html.ActionLink("Add New", "Create", new { id = "" }, new { @class = "btn btn-warning" })
+    </div>
+    <br />
+    <table class="table table-hover table-responsive custom-table">
+        <tr>
+            <th>
+                @Html.DisplayName("First Name")
+            </th>
+            <th>
+                @Html.DisplayName("Last Name")
+            </th>
+            <th>
+                @Html.DisplayName("Village Name")
+            </th>
+            <th>
+                @Html.DisplayName("Type of Farming")
+            </th>
+            <th>
+                @Html.DisplayName("Gender")
+            </th>
+            <th>
+                @Html.DisplayName("Province")
+            </th>
+            <th>
+                @Html.DisplayName("Action")
+            </th>
+            <th></th>
+        </tr>
+
+        @if (Model.Count == 0)
+        {
+            <tr>
+                <td colspan="7">
+                    <div class="alert alert-warning">
+                        @TempData["SearchAlert"]
+                    </div>
+                </td>
+            </tr>
+        }
+        else
+        {
+
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Village_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FARM_TYPES.TYPE_OF_FARMING)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GENDER1.GENDER1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PROVINCE1.PROVINCE1)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.UserID }, new { @class = "btn btn-edit" }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.UserID }, new { @class = "btn btn-delete" })
+                    </td>
+                </tr>
+            }
+        }
+
+    </table>
+    <div class="pagination-container">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, search = Request.QueryString["search"] }))
+    </div>
+
+    //
+    //custom script to close alert message after 5 sec
+    //
+    <script src="~/Custom Js/AlertMessageTimer.js"></script>
+}
+
+

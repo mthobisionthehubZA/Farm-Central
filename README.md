@@ -18,7 +18,9 @@ Farm Central is a robust web application designed to facilitate the comprehensiv
 - SQL Server
 - Google reCAPTCHA
 - Google Maps API
-
+- 
+## View the Application Online
+You can view the live version demo of this web application by clicking [here](https://youtu.be/5NSiFOMys-c?si=kGfxZuKouxZ2S2S4).
 ## Security Measures
 
 - **Password Encryption:** All administrator passwords are securely salted and hashed within the database, ensuring robust encryption and safeguarding sensitive user credentials.
